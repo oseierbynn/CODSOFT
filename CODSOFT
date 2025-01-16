@@ -1,0 +1,85 @@
+package codsoft.internship.pkg1;
+
+import java.util.Scanner;
+import java .util.Random;
+public class CODSOFTINTERNSHIP1 {
+
+
+    public static void main(String[] args)
+    {
+        String answer = ("yes");
+        while(answer.equals("yes")){
+        //generating a random number 
+        Scanner input = new Scanner (System.in);
+        int random  = (int) (Math.random()*100)+1;;
+        int usersguess =0;
+        int mxofattempts=3;
+        int usedattempts=0;
+        
+        
+        
+        
+       //calling the method
+       outline( usersguess,input,random,usedattempts,mxofattempts); 
+       
+       
+       System.out.println("Do you want to play again [Yes/No] ");
+       answer =input.nextLine();
+      if(!answer.equals("yes"))
+      {
+          System.out.println("Thanks");
+      }
+        }
+    }
+    
+   public static int outline(int usersguess,Scanner input,int random,int usedattempts,int mxofattempts){
+       
+     while(usedattempts<mxofattempts){
+        
+        
+        
+        //user should enter their guessed number
+        System.out.println("Enter your guess for the generated number.");
+        usersguess = input.nextInt();
+       usedattempts++;
+        input.nextLine(); 
+        
+        //Comparing  the user's guess with the generated number
+        if ( random==usersguess)
+        {
+            
+            System.out.println("Your guess is correct");
+            
+        }
+        
+        else if(usersguess <random)
+                {
+                    
+                    
+                System.out.println("Your guess is low");    
+                    
+                }
+        else  
+            
+         {
+                     
+                    
+                System.out.println("Your guess is high");    
+                    
+                }
+        
+        if(usedattempts==mxofattempts)
+        {
+            System.out.println("You are out of attempts");
+        }
+        
+       }
+
+     
+       
+      return usersguess; 
+   }    
+       
+       
+         
+}
