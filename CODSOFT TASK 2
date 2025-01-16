@@ -1,0 +1,65 @@
+package codsofttask2;
+
+import java.util.Scanner;
+public class codsofttask2 {
+
+    
+    public static void main(String[] args)
+    {
+       Scanner input = new Scanner (System.in);
+       
+      System.out.println("How many subjects");
+      int num = input.nextInt();
+        double marks=0;
+      
+    for(int i=0;i<num;i++)
+    {
+        System.out.println("Enter your marks(0-100)");
+      
+         marks += input.nextInt();
+    }
+      
+      
+    double avgper = marks / num ;  
+    
+    if (avgper>=90&&avgper<=100)
+    {
+        System.out.println("The total marks is " + marks );
+        System.out.println("The average percentage is " + avgper );
+        System.out.println("Your assigned grade is : A");
+    }      
+      
+     else if (avgper>=80&& avgper<=89)
+    {
+        System.out.println("The total marks is " + marks );
+        System.out.println("The average percentage is " + avgper );
+        System.out.println("Your assigned grade is : B");
+    }      
+      
+    else if (avgper>=70&& avgper<=79)
+    {
+        System.out.println("The total marks is " + marks );
+        System.out.println("The average percentage is " + avgper );
+        System.out.println("Your assigned grade is : C ");
+    }       
+      
+      else if (avgper>=60&& avgper<=69)
+    {
+        System.out.println("The total marks is " + marks );
+        System.out.println("The average percentage is " + avgper );
+        System.out.println("Your assigned grade is : C ");
+    }   
+      
+      
+   else 
+    {
+        System.out.println("The total marks is " + marks );
+        System.out.println("The average percentage is " + avgper );
+        System.out.println("Your assigned grade is : D");
+    }     
+      
+      
+      
+    }
+    
+}
